@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Html.PartialAsync("/Views/Shared/_TemplateLayoutHead.cshtml")
+<body>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body text-white"></div>
+        </div>
+
+        @await Html.PartialAsync("/Views/Shared/_TemplateLayoutHeader.cshtml")
+
+        <div class="container-fluid" data-aos="fade" data-aos-delay="500">
+            @RenderBody()
+        </div>
+
+        @await Html.PartialAsync("/Views/Shared/_TemplateLayoutFooter.cshtml")
+
+
+
+
+    </div>
+
+    @await Html.PartialAsync("/Views/Shared/_TemplateLayoutScript.cshtml")
+
+</body>
+
+<!-- Mirrored from technext.github.io/photosen/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Jul 2021 09:53:01 GMT -->
+</html>
