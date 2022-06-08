@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-BUBEBSC; database=DbWallpaper;integrated security=true");
+            optionsBuilder.UseSqlServer("server=DESKTOP-BUBEBSC; database=DbImageProject;integrated security=true");
             //optionsBuilder.UseSqlServer("Data Source=77.245.159.136;Initial Catalog=veteriner;User ID=veteriner;Password=A.sd12345678987654321;persist security info=True");
         }
         public DbSet<About> Abouts { get; set; }

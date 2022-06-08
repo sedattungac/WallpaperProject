@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "contact";
+    Layout = "~/Views/Shared/_TemplateLayout.cshtml";
+}
+
+<div class="site-section" data-aos="fade">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="row mb-5">
+                    <div class="col-12 ">
+                        <h2 class="site-section-heading text-center">İletişim</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mb-5">
+                <form method="post" asp-action="SendMessage">
+                    <div class="row form-group">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label class="text-white" for="fname">İsim</label>
+                            <input type="text" id="fname" name="FirstName" class="form-control" placeholder="İsim" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-white" for="lname">Soyisim</label>
+                            <input type="text" id="lname" name="LastName" class="form-control" placeholder="Soyisim" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-white" for="email">Mail</label>
+                            <input type="email" id="email" name="Email" class="form-control" placeholder="Mail" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-white" for="subject">Konu</label>
+                            <input type="text" id="subject" name="Subject" class="form-control" placeholder="Konu" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-white" for="message">Mesaj</label>
+                            <textarea name="Message" id="message" cols="30" rows="7" class="form-control" placeholder="Notlarınızı veya sorularınızı buraya yazın..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary py-2 px-4 text-white">Mesaj Gönder</button>
+                            @*<input type="submit" class="btn btn-primary py-2 px-4 text-white">*@
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 ml-auto">
+                <div class="mb-3">
+                    <p class="mb-0 font-weight-bold text-white">Adres</p>
+                    <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+
+                    <p class="mb-0 font-weight-bold text-white">Telefon</p>
+                    <p class="mb-4"><a href="tel:+12323235324">+1 232 3235 324</a></p>
+
+                    <p class="mb-0 font-weight-bold text-white">Mail Adresi</p>
+                    <p class="mb-0"><a href="mailto:youremail@domain.com">youremail@domain.com</a></p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

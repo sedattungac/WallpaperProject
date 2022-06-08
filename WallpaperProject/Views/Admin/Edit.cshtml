@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.Admin
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h4>Admin Düzenleme Sayfası</h4>
+<hr />
+<div class="row">
+    <div class="container-fluid col-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AdminId" />
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label">Ad Soyad</label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label">Kullanıcı Adı</label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Mail Adresi</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Şifre</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label">Resim</label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="float-left">
+                    <a class="btn btn-dark" asp-action="Index"><i class="fas fa-arrow-left"></i> Listeye Geri Dön</a>
+                </div>
+                <div class="float-right">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Güncelle</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+

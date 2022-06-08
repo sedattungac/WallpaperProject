@@ -28,6 +28,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Description2")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
@@ -103,6 +106,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ImageCategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
@@ -110,6 +116,8 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ImageId");
+
+                    b.HasIndex("ImageCategoryId");
 
                     b.ToTable("Images");
                 });
@@ -178,6 +186,22 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("SocialMediaId");
 
                     b.ToTable("SocialMedias");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Image", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.ImageCategory", "ImageCategory")
+                        .WithMany("Images")
+                        .HasForeignKey("ImageCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ImageCategory");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.ImageCategory", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }
