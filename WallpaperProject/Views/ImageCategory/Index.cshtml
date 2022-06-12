@@ -103,7 +103,7 @@
             //Searching
             oTable = $('#example').DataTable();
             $('#btnSearch').click(function () {
-                oTable.columns(2).search($('#txtFullName').val().trim());
+                oTable.columns(1).search($('#txtFullName').val().trim());
                 oTable.columns(3).search($('#txtUserName').val().trim());
                 oTable.columns(4).search($('#txtEmail').val().trim());
                 oTable.draw();

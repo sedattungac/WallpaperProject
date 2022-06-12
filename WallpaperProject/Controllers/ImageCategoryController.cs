@@ -34,8 +34,8 @@ namespace WallpaperProject.Controllers
                 var sortColumnDirection = Request.Form["order[0][dir]"].FirstOrDefault();
                 // Search Value from (Search box)  
                 var searchValue = Request.Form["search[value]"].FirstOrDefault();
-                var categoryId = Request.Form["columns[2][search][value]"].FirstOrDefault();
-                var title = Request.Form["columns[1][search][value]"].FirstOrDefault();
+                var categoryId = Request.Form["columns[1][search][value]"].FirstOrDefault();
+                var title = Request.Form["columns[5][search][value]"].FirstOrDefault();
                 var imageUrl = Request.Form["columns[3][search][value]"].FirstOrDefault();
                 var status = Request.Form["columns[4][search][value]"].FirstOrDefault();
 
